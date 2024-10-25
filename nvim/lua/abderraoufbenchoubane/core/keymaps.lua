@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>nh", ":nohl<CR>", {desc = "Clear the search highlight"})
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear the search highlight" })
 
 --Pane management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
@@ -10,11 +10,14 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split wind
 
+keymap.set("n", "<leader>s=", "<cmd>vertical resize +5 <CR>", { desc = "Increase the width" }) -- make the split wider
+keymap.set("n", "<leader>s-", "<cmd>vertical resize -5 <CR>", { desc = "Descrease the width" }) -- make the split thiner
+
 --Pane navigation
-keymap.set("n", "<leader>sr", "<cmd>wincmd l<CR>", {desc="Go to the pane on left"})
-keymap.set("n", "<leader>sl", "<cmd>wincmd h<CR>", {desc="Go to the pane on the right"})
-keymap.set("n", "<leader>sb", "<cmd>wincmd j<CR>", {desc="Go to the pane below"})
-keymap.set("n", "<leader>su", "<cmd>wincmd k<CR>", {desc="Go to the pane above"})
+keymap.set("n", "<leader>sr", "<cmd>wincmd l<CR>", { desc = "Go to the pane on left" })
+keymap.set("n", "<leader>sl", "<cmd>wincmd h<CR>", { desc = "Go to the pane on the right" })
+keymap.set("n", "<leader>sb", "<cmd>wincmd j<CR>", { desc = "Go to the pane below" })
+keymap.set("n", "<leader>su", "<cmd>wincmd k<CR>", { desc = "Go to the pane above" })
 
 -- tab management
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
