@@ -32,3 +32,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.swapfile = false
+
+opt.spelllang = "en_us"
+opt.spell = true

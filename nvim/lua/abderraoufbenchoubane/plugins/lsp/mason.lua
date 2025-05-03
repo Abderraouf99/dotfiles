@@ -30,6 +30,7 @@ return {
 				"lua_ls",
 				"graphql",
 				"pyright",
+				"rust_analyzer",
 			},
 		})
 
