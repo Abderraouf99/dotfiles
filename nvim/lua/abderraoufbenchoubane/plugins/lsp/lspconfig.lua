@@ -87,6 +87,19 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		lspconfig["dartls"].setup({
+			settings = {
+				dart = {
+					analysisExludedFolders = {
+						vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+						vim.fn.expand("$HOME/.pub-cache"),
+						vim.fn.expand("$HOME/bin/flutter"),
+						vim.fn.expand("/opt/homebrew"),
+					},
+				},
+			},
+		})
+
 		mason_lspconfig.setup({
 			handlers = {
 				function(server_name)
