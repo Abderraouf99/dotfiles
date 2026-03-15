@@ -2,6 +2,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
+-- thick cursor
+opt.guicursor = ""
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -11,6 +14,10 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
+
+-- improve search
+opt.hlsearch = false
+opt.incsearch = true
 
 -- disable line wrap
 opt.wrap = false

@@ -25,3 +25,7 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+
+-- editing
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection up" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection down" })
